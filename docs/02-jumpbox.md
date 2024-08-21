@@ -22,8 +22,11 @@ yum -y install wget curl neovim openssl git
 Now it's time to download a copy of this tutorial which contains the configuration files and templates that will be used build your Kubernetes cluster from the ground up. Clone the Kubernetes The Hard Way git repository using the `git` command:
 
 ```bash
-git clone --depth 1 \
-  https://github.com/kelseyhightower/kubernetes-the-hard-way.git
+git clone https://github.com/IrwinJuice/kubernetes-the-hard-way.git
+```
+
+```bash
+git switch -c oracle-amd64 origin/oracle-amd64
 ```
 
 Change into the `kubernetes-the-hard-way` directory:
@@ -39,7 +42,7 @@ pwd
 ```
 
 ```text
-/root/kubernetes-the-hard-way
+/home/IJ/kubernetes-the-hard-way
 ```
 
 ### Download Binaries
@@ -76,17 +79,18 @@ ls -loh downloads
 
 ```text
 total 584M
--rw-r--r-- 1 root  41M May  9 13:35 cni-plugins-linux-arm64-v1.3.0.tgz
--rw-r--r-- 1 root  34M Oct 26 15:21 containerd-1.7.8-linux-arm64.tar.gz
--rw-r--r-- 1 root  22M Aug 14 00:19 crictl-v1.28.0-linux-arm.tar.gz
--rw-r--r-- 1 root  15M Jul 11 02:30 etcd-v3.4.27-linux-arm64.tar.gz
--rw-r--r-- 1 root 111M Oct 18 07:34 kube-apiserver
--rw-r--r-- 1 root 107M Oct 18 07:34 kube-controller-manager
--rw-r--r-- 1 root  51M Oct 18 07:34 kube-proxy
--rw-r--r-- 1 root  52M Oct 18 07:34 kube-scheduler
--rw-r--r-- 1 root  46M Oct 18 07:34 kubectl
--rw-r--r-- 1 root 101M Oct 18 07:34 kubelet
--rw-r--r-- 1 root 9.6M Aug 10 18:57 runc.arm64
+-rw-r--r--. 1 IJ  41M May  9  2023 cni-plugins-linux-arm64-v1.3.0.tgz
+-rw-r--r--. 1 IJ  34M Oct 27  2023 containerd-1.7.8-linux-arm64.tar.gz
+-rw-r--r--. 1 IJ  22M Aug 14  2023 crictl-v1.28.0-linux-arm.tar.gz
+-rw-r--r--. 1 IJ  15M Jul 11  2023 etcd-v3.4.27-linux-arm64.tar.gz
+-rw-r--r--. 1 IJ 111M Oct 18  2023 kube-apiserver
+-rw-r--r--. 1 IJ 107M Oct 18  2023 kube-controller-manager
+-rw-r--r--. 1 IJ  46M Oct 18  2023 kubectl
+-rw-r--r--. 1 IJ 101M Oct 18  2023 kubelet
+-rw-r--r--. 1 IJ  51M Oct 18  2023 kube-proxy
+-rw-r--r--. 1 IJ  52M Oct 18  2023 kube-scheduler
+-rw-r--r--. 1 IJ 9.6M Aug 11  2023 runc.arm64
+
 ```
 
 ### Install kubectl
@@ -98,7 +102,7 @@ Use the `chmod` command to make the `kubectl` binary executable and move it to t
 ```bash
 {
   chmod +x downloads/kubectl
-  cp downloads/kubectl /usr/local/bin/
+  sudo cp downloads/kubectl /usr/local/bin/kubectl
 }
 ```
 
