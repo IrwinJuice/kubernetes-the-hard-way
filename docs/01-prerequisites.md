@@ -13,18 +13,17 @@ This tutorial requires four (4) virtual or physical ARM64 machines running Debia
 | node-0  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 | node-1  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 
-How you provision the machines is up to you, the only requirement is that each machine meet the above system requirements including the machine specs and OS version. Once you have all four machine provisioned, verify the system requirements by running the `uname` command on each machine:
+## Oracle Linux
 
-```bash 
-uname -mov
-```
+### add user in `sudoers`
 
-After running the `uname` command you should see the following output:
+-   `su root`
+- `usermod -aG root IJ`
+- `usermod -aG wheel IJ`
+- `vi /etc/sudoers`
 
-```text
-#1 SMP Debian 6.1.55-1 (2023-09-29) aarch64 GNU/Linux
-```
+**after** `root     ALL=(ALL) ALL` **add**
 
-You maybe surprised to see `aarch64` here, but that is the official name for the Arm Architecture 64-bit instruction set. You will often see `arm64` used by Apple, and the maintainers of the Linux kernel, when referring to support for `aarch64`. This tutorial will use `arm64` consistently throughout to avoid confusion.
+`username ALL=(ALL) ALL`
 
 Next: [setting-up-the-jumpbox](02-jumpbox.md)
