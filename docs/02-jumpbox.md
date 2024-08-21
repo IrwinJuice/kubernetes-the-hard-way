@@ -78,19 +78,18 @@ ls -loh downloads
 ```
 
 ```text
-total 584M
--rw-r--r--. 1 IJ  41M May  9  2023 cni-plugins-linux-arm64-v1.3.0.tgz
--rw-r--r--. 1 IJ  34M Oct 27  2023 containerd-1.7.8-linux-arm64.tar.gz
--rw-r--r--. 1 IJ  22M Aug 14  2023 crictl-v1.28.0-linux-arm.tar.gz
--rw-r--r--. 1 IJ  15M Jul 11  2023 etcd-v3.4.27-linux-arm64.tar.gz
--rw-r--r--. 1 IJ 111M Oct 18  2023 kube-apiserver
--rw-r--r--. 1 IJ 107M Oct 18  2023 kube-controller-manager
--rw-r--r--. 1 IJ  46M Oct 18  2023 kubectl
--rw-r--r--. 1 IJ 101M Oct 18  2023 kubelet
--rw-r--r--. 1 IJ  51M Oct 18  2023 kube-proxy
--rw-r--r--. 1 IJ  52M Oct 18  2023 kube-scheduler
--rw-r--r--. 1 IJ 9.6M Aug 11  2023 runc.arm64
-
+total 557M
+-rw-r--r--. 1 IJ 46M Jun 17 18:51 cni-plugins-linux-amd64-v1.5.1.tgz
+-rw-r--r--. 1 IJ 46M Jul 18 07:19 containerd-1.7.20-linux-amd64.tar.gz
+-rw-r--r--. 1 IJ 18M Aug 13 13:48 crictl-v1.31.1-darwin-amd64.tar.gz
+-rw-r--r--. 1 IJ 21M Jul 19 23:36 etcd-v3.5.15-darwin-amd64.zip
+-rw-r--r--. 1 IJ 87M Aug 13 17:23 kube-apiserver
+-rw-r--r--. 1 IJ 81M Aug 13 17:23 kube-controller-manager
+-rwxr-xr-x. 1 IJ 54M Aug 13 17:23 kubectl
+-rw-r--r--. 1 IJ 74M Aug 13 17:23 kubelet
+-rw-r--r--. 1 IJ 62M Aug 13 17:23 kube-proxy
+-rw-r--r--. 1 IJ 61M Aug 13 17:23 kube-scheduler
+-rw-r--r--. 1 IJ 11M Jun 13 19:12 runc.amd64
 ```
 
 ### Install kubectl
@@ -113,8 +112,8 @@ kubectl version --client
 ```
 
 ```text
-Client Version: v1.28.3
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Client Version: v1.31.0
+Kustomize Version: v5.4.2
 ```
 
 At this point the `jumpbox` has been set up with all the command line tools and utilities necessary to complete the labs in this tutorial.
