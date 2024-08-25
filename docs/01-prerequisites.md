@@ -4,7 +4,7 @@ In this lab you will review the machine requirements necessary to follow this tu
 
 ## Virtual or Physical Machines
 
-This tutorial requires four (4) virtual or physical ARM64 machines running Debian 12 (bookworm). The follow table list the four machines and thier CPU, memory, and storage requirements.
+This tutorial requires four (4) virtual or physical AMD64 machines running Oracle 9.4. The follow table list the four machines and thier CPU, memory, and storage requirements.
 
 | Name    | Description            | CPU | RAM   | Storage |
 |---------|------------------------|-----|-------|---------|
@@ -12,7 +12,8 @@ This tutorial requires four (4) virtual or physical ARM64 machines running Debia
 | server  | Kubernetes server      | 1   | 2GB   | 20GB    |
 | node-0  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 | node-1  | Kubernetes worker node | 1   | 2GB   | 20GB    |
-
+## Virtual Box
+![vm.png](..%2Fvm.png)
 ## Oracle Linux
 
 ### add user in `sudoers`
